@@ -1,0 +1,38 @@
+---
+import Skilll from "./Skill.astro"
+import "../CSS/Skills.css"
+import Desing from "../icons/Desing.astro"
+import { isConciseBody } from "typescript"
+import System from "../icons/System.astro"
+import Tool from "../icons/ToolDev.astro"
+import BackIcon from "../icons/BackIcon.astro"
+import FrontIcon from "../icons/FrontIcon.astro"
+
+const SkillsSpecialities = [
+    {name:"Front-End",
+        icon:FrontIcon
+    }, {name:"Back-End",
+        icon:BackIcon
+    },  { name:"Herramientas",
+        icon:Tool
+    }, { name:"Diseño ",
+        icon:Desing
+    }
+    
+    ]
+---
+
+<div class="content-skills">
+
+    {SkillsSpecialities.map((skill) => (
+        <div class="skill">
+            <div class="skill-header">
+            <skill.icon  />
+            <h2>{skill.name}</h2>
+
+            </div>
+            <Skilll skillArea={skill.name} />
+        </div>
+    ))}
+
+</div>

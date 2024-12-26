@@ -1,0 +1,93 @@
+.experience-list {
+  position: relative;
+  border-left: 1.5px solid #e5e7eb;
+}
+
+.experience-item {
+  margin-bottom: 2.5rem;
+  margin-left: 1.5rem;
+}
+
+.icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #1e3a8a;
+  border-radius: 9999px;
+  left: -0.75rem;
+  box-shadow: 0 0 0 2px #1f2937;
+}
+
+.icon-svg {
+  width: 0.625rem;
+  height: 0.625rem;
+  color: #93c5fd;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.company {
+  background-color: #1e3a8a;
+  color: #93c5fd;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: 0.75rem;
+  padding: 0.125rem 0.625rem;
+  border-radius: 0.5rem;
+}
+
+.date {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.description {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+.light .experience-list {
+  border-left: 1.5px solid #404753c0;
+}
+
+.light .icon {
+  background-color: #1e3a8a;
+
+  box-shadow: 0 0 0 2px #d6d6d6;
+}
+
+.light .icon-svg {
+  color: #ebf8ff;
+}
+
+.light .title {
+  color: #111827;
+}
+
+.light .company {
+  background-color: #ebf8ff;
+  color: #1e40af;
+}
+
+.light .date {
+  color: #9ca3af;
+}
+
+.light .description {
+  color: #6b7280;
+}

@@ -1,0 +1,33 @@
+---
+import '../CSS/Experience.css'
+import Link from '../icons/Link.astro'
+import ExperienceItem from './ExperienceItem.astro'
+
+const EXCPERIENCE = [
+    {   
+        title: "Desarrollador de Proyectos Personales y Estudio Independiente",
+        company: "Trabajo Autónomo",
+        job: "Desarrollador Frontend / Backend",
+        date: "2023 - Actualidad",
+        description: "A pesar de no tener experiencia profesional directa en una empresa, he acumulado más de un año de experiencia desarrollando proyectos por cuenta propia y a través de un bootcamp. Durante este tiempo, he trabajado de manera autónoma investigando y resolviendo problemas para mejorar mis habilidades en tecnologías como HTML, CSS, JavaScript, TypeScript, Node.js, MongoDB y Express. Este proceso constante de aprendizaje y búsqueda de soluciones me ha permitido desarrollar proyectos completos y adquirir la experiencia necesaria para seguir avanzando en el campo del desarrollo web.",
+        link: "https://github.com/EmilianoAriel", 
+    },
+    {   
+    title: "Próxima Estación: Tu Compañía",
+    company: "En proceso...",
+    job: "Desarrollador en crecimiento",
+    date: "Cargando...",
+    description: "Mi próximo desafío está a la vuelta de la esquina. Actualmente estoy en constante aprendizaje y desarrollo de habilidades, y la siguiente oportunidad podría ser contigo. ¡Estoy listo para ser parte de tu equipo y aportar todo lo que he aprendido hasta ahora! La próxima experiencia laboral está en camino, ¿será tu empresa la que me brinde esa oportunidad?"
+}
+
+
+]
+---
+
+<ol class="experience-list">
+    {EXCPERIENCE.map((experience) => (
+        <li class="experience-item">
+           <ExperienceItem {...experience}/>
+        </li>
+    ))}
+</ol>

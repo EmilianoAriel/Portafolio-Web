@@ -1,0 +1,43 @@
+.article-about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: #d1d5db;
+}
+
+@media (min-width: 768px) {
+  .article-about-me {
+    flex-direction: row;
+  }
+}
+
+.light .article-about-me {
+  color: #374151;
+}
+
+.container-about-me {
+  color: var(--color-pretty);
+  order: 2;
+  p {
+    margin-bottom: 1rem;
+  }
+
+  strong {
+    color: #fef08a;
+    font-weight: normal;
+    font-family: monospace;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-about-me {
+    order: 1;
+  }
+}
+
+.light strong {
+  color: #facc15;
+}

@@ -1,0 +1,97 @@
+---
+import '../CSS/Main.css'
+import Briefcase from '../icons/Briefcase.astro'
+import CodeIcon from '../icons/Code.astro'
+import ProfileCheck from '../icons/ProfileCheck.astro'
+import Badge from './Badge.astro'
+import Proyects from './Proyects.astro'
+import SectionContainer from './SectionContainer.astro'
+import TitleSection from './TitleSection.astro'
+import Experience from './Experience.astro'
+import Tool from '../icons/Tool.astro'
+import Skills from './Skills.astro'
+import SocialPill from './SocialPill.astro'
+import Mail from '../icons/Mail.astro'
+import LinkedIn from '../icons/LinkedIn.astro'
+import GitHub from '../icons/GitHub.astro'
+import AboutMe from './AboutMe.astro'
+---
+
+<header class="header-main">    
+    <img class="img-principal" src="../../public/Image/ImagenPrincipal.jpg" alt="Imagen">
+    <div class="text">
+        <h1>Hola, soy <span>Emiliano Figueroa</span> </h1>
+        <a
+      href="https://www.linkedin.com/in/emilianofigueroa-desarrollador-fullstack/"
+      target="_blank"
+      rel="noopener"
+      class="ancor-disponible"
+      >
+      <Badge class="badge" >Disponible para trabajar</Badge>
+     </a>
+      <h2>
+        1 año de experiencia en desarrollo web. <span>Desarrollador Frontend con sólidos conocimientos en Backend</span>, especializado en tecnologías como HTML, CSS, JavaScript, React y Node.js. Apasionado por crear interfaces dinámicas y soluciones innovadoras
+         
+        </h2>
+        <nav class="links">
+            <SocialPill href="mailto:emilianoariel6@gmail.com">
+                    <Mail class="icon-header"/>
+                    Contactame
+            </SocialPill>
+           <SocialPill href="https://www.linkedin.com/in/emilianofigueroa-desarrollador-fullstack/">
+            
+
+                <LinkedIn class="icon-header" />
+           
+
+                LinkedIn
+            
+           </SocialPill>
+
+           <SocialPill href="https://github.com/EmilianoAriel">
+            
+
+                <GitHub class="icon-header" />
+           
+
+                GitHub
+            
+           </SocialPill>
+        </nav>
+    </div>
+</header>
+<main>
+    <SectionContainer id="proyectos">
+        <TitleSection>
+            <CodeIcon/>
+          Proyectos
+        </TitleSection>
+        <Proyects/>
+        
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+    <TitleSection class="title-experience" >
+        <Briefcase/>
+        Experiencia
+    </TitleSection>
+    <Experience/>
+    </SectionContainer>
+    <SectionContainer id="habilidades">
+        <TitleSection>
+            <Tool/>
+            Habilidades
+        </TitleSection>
+        <Skills/>
+    </SectionContainer>
+</main>
+<footer>
+    <SectionContainer id="sobremi">
+        <TitleSection>
+            <ProfileCheck/>
+            Sobre mi
+        </TitleSection>
+        <AboutMe/>
+    </SectionContainer>
+
+</footer>

@@ -1,0 +1,112 @@
+---
+import LinkButton from "./LinkButton.astro"
+import Link from "../icons/Link.astro"
+import GitHub from "../icons/GitHub.astro"
+import "../CSS/Proyects.css"
+import ReactIcon from "../icons/ReactIcon.astro";
+import NodeJs from "../icons/NodeJs.astro";
+import ExpressJS from "../icons/ExpressJS.astro";
+import Mongo from "../icons/Mongo.astro";
+import TS from "../icons/TS.astro";
+
+
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-[rgba(59,130,246)] text-white",
+    icon: ReactIcon, 
+  },
+  NODEJS: {
+    name: "Node.js",
+    class: "bg-green-600 text-white",
+    icon: NodeJs, 
+  },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-black text-white",
+    icon: ExpressJS, 
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-green-700 text-white",
+    icon: Mongo, 
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[rgba(0,122,204)] text-white",
+    icon: TS, 
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "AutoClassComplete - Simplifica la Gestión de Clases en tus Proyectos",
+    description:
+    "Extensión de VS Code para autocompletar clases en CSS. Recorre archivos HTML, JSX y Astro. Actualización dinámica de clases al guardar. Mejor flujo de trabajo sin cambiar de archivo. Creada completamente en TypeScript.",
+    link: "https://marketplace.visualstudio.com/items?itemName=EmilianoFigueroa.class-complete",
+    github: "https://github.com/EmilianoAriel/ClassComplete.git",
+    image: "../../public/Image/AutoClassExtencion.webp",
+    tags: [TAGS.TYPESCRIPT],
+  },
+  {
+    title: "Tienda Padel - Ecommerce de Padel con MERN Stack",
+  description:
+    "Ecommerce desarrollado con MERN (MongoDB, Express, React, Node.js). Incluye login, administración de usuarios y productos, secciones exclusivas para administradores, carrito de compras, historial de compras y una pasarela de pago con Mercado Pago .",
+  link: "https://tiendapadel.com",
+  image: "../../public/Image/TiendaPadel.webp",  
+  tags: [TAGS.REACT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.MONGODB],
+  },
+]
+---
+{
+<div class="projects-container">
+  {PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article class="project-card">
+      <div class="project-image-wrapper">
+        <div class="project-image-container">
+          <img
+            alt={title}
+            class="project-image"
+            loading="lazy"
+            src={image}
+          />
+        </div>
+      </div>
+
+      <div class="project-content-wrapper">
+        <h3 class="project-title">{title}</h3>
+        <div class="project-tags">
+          <ul class="tags-list">
+            {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+         
+          </ul>
+        </div>
+        <div class="project-description">{description}</div>
+        <footer class="project-footer">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="footer-icon" />
+              Code
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <Link class="footer-icon" />
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+      </div>
+    </article>
+  ))}
+</div>
+}

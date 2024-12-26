@@ -1,0 +1,161 @@
+---
+const {skillArea } = Astro.props
+import { reduceEachTrailingCommentRange } from "typescript"
+import "../CSS/Skills.css"
+import CssIcon from "../icons/CssIcon.astro"
+import HtmlIcon from "../icons/HtmlIcon.astro"
+import JS from "../icons/JS.astro"
+import React from "../icons/ReactIcon.astro"
+import Boostrap from "../icons/Boostrap.astro"
+import VSCode from "../icons/VSCode.astro"
+import Git from "../icons/GitIcon.astro"
+import GitHub from "../icons/GitHub2.astro"
+import Postman from "../icons/Postman.astro"
+
+import AstroIcon from "../icons/AstroIcon.astro"
+import NodeJs from "../icons/NodeJs.astro"
+import ExpressJS from "../icons/ExpressJS.astro"
+import Mongo from "../icons/Mongo.astro"
+import MySql from "../icons/MySql.astro"
+import MP from "../icons/MP.astro"
+import TS from "../icons/TS.astro"
+import Figma from "../icons/Figma.astro"
+import Photoshop from "../icons/Photoshop.astro"
+import Illustrator from "../icons/Illustrator.astro"
+import Lightroom from "../icons/Lightroom.astro"
+import Canva from "../icons/Canva.astro"
+const SkillsComponents =[
+    {skillSpeciality :"Front-End", TAGS:[
+    {
+
+        name:"HTML5", 
+        icon: HtmlIcon
+    },
+    {
+        name:"CSS", 
+        icon: CssIcon},
+        {name:"BoosTrap",
+            icon:Boostrap
+        },
+
+     {
+            name:"Javascript",
+            icon: JS
+        },
+        {
+            name:"Astro",
+            icon:AstroIcon,
+    
+        },
+     {name:"Tyscript",
+        icon:TS
+     },
+     {
+        name:"React",
+        icon: React
+    },
+
+
+        
+    ]
+        
+    },
+
+    {skillSpeciality :"Back-End", TAGS:[{
+        name:"NodeJS", 
+        icon: NodeJs
+    },
+    {name:"ExpressJS",
+        icon:ExpressJS,
+    },
+    {name:"MongoDB",
+        icon:Mongo
+    },
+    {
+        name:"MySQL",
+        icon: MySql
+    },
+    {
+        name:"Mercado Pago Api",
+        icon:MP,
+    },
+    {
+        name:"Typescript",
+        icon:TS
+    },
+    {
+        name:"Javascript",
+        icon:JS
+    }
+    
+
+
+   ]
+
+},
+
+    {skillSpeciality :"Herramientas", TAGS:[{
+        name:"Visual Studio Code", 
+        icon: VSCode
+    },
+    {
+        name:"Git",
+        icon:Git
+    },
+    {
+        name:"GitHub",
+        icon:GitHub
+    },
+    {
+        name:"Postman",
+        icon:Postman
+    },
+
+   
+    ]},
+
+    {skillSpeciality :"Diseño ", TAGS:[{
+        name:"Figma", 
+        icon: Figma
+    },
+    {
+        name:"Photoshop", 
+        icon: Photoshop
+    },
+    {
+        name:"Illustrator",
+        icon:Illustrator
+    },
+    {
+        name:"Ligthroom",
+        icon:Lightroom
+    },
+    {
+        name:"Canva", 
+        icon: Canva
+    }
+
+   
+
+
+]}
+]
+
+---
+
+
+<div class="conteiner-skills">
+
+    {SkillsComponents.map(skill => (
+        skill.skillSpeciality === skillArea && (
+            skill.TAGS.map(tag => (
+                    <div class="skill-content">
+                    <tag.icon class="tag-icon " />
+                    <h3>{tag.name}</h3>
+                </div>
+                ))
+        )
+    ))
+        }
+
+</div>

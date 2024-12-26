@@ -1,0 +1,30 @@
+---
+import SpainFlag from "../icons/SpainFlag.astro";
+import EEUU from "../icons/EEUU.astro";
+import "../CSS/Lenguaje.css"
+
+import { lenguages } from "../i18n/ui";
+
+let currentLanguaje = "es";
+
+
+---
+
+<div class="content-lenguaje">
+  <div>
+    <SpainFlag class="flag" />
+  </div>
+  <label for="switch" class="content-switch">
+    <input 
+    id="switch" 
+    class="switch-checkbox" 
+    type="checkbox" 
+    onchange="changeLanguage(event)"
+    checked={currentLanguaje === "en"} 
+  />
+    <div class="switch"></div>
+  </label>
+  <div><EEUU class="flag" /></div>
+</div>
+
+
