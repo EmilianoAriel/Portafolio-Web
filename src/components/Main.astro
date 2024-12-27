@@ -15,6 +15,9 @@ import Mail from '../icons/Mail.astro'
 import LinkedIn from '../icons/LinkedIn.astro'
 import GitHub from '../icons/GitHub.astro'
 import AboutMe from './AboutMe.astro'
+
+
+const ImagenPrincipal = "/Image/ImagenPrincipal.jpg"
 ---
 
 <header class="header-main">    
@@ -22,7 +25,7 @@ import AboutMe from './AboutMe.astro'
     <div class="text">
         <h1>Hola, soy <span>Emiliano Figueroa</span> </h1>
         <a
-      href="https://www.linkedin.com/in/emilianofigueroa-desarrollador-fullstack/"
+      href={ImagenPrincipal}
       target="_blank"
       rel="noopener"
       class="ancor-disponible"
